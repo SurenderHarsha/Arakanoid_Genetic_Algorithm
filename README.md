@@ -10,4 +10,8 @@ The game is played using an Emulator called FCEUX. Version 2.2.3. After loading 
 The whole algorithm is coded in Lua in a single file.
 
 ## The Algorithm
-### The encoding
+In every genetic algorithm we find,
+
+A Population, which contains some members(Chromosome/DNA). These chromosomes contains 'genes' which contain information related to the behaviour of that member.
+
+Each member of the population is given a fitness of how well they perform(survive) in that given task/environment. Based on their fitness..............
