@@ -1,2 +1,4 @@
 # A Genetic Algorithm to Play Arkanoid (Readme currently being Updated...)
-An Implementation of a Modified Genetic Algorithm to play Arkanoid(NES), a complicated version of Atari Breakout with powerups and enemies and different blocks.
+
+## The Game
+Arkanoid is game for the NES console which was inspired by the original Atari Breakout.
