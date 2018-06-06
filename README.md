@@ -80,7 +80,7 @@ The behaviour of the bot mainly depends on the fitness formula it uses. One thin
 Another option can be to put a variable mutation rate as the generations increase, but this may result in the loss of best fit genes. Another solution can be to decrease the **control_gap** after a set of generations( Commented in the code).
 
 
-Overall, the algorithm performs well.
+Overall, the algorithm performs well. Here is a [link](https://www.youtube.com/watch?v=Y21n9ZZDFyQ) to see how the algorithm performs.
 
 
  1. Round 1 Completion time: approx 8-10 Hours
