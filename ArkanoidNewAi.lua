@@ -241,6 +241,8 @@ while true do
 				if pop[i][2]>best_f then
 					best_f=pop[i][2];
 				end
+				winner_inp=cand;
+				winner=1;
 				ti=1;
 				break;
 			end
