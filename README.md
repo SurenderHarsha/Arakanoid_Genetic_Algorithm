@@ -81,10 +81,12 @@ Another option can be to put a variable mutation rate as the generations increas
 
 
 Overall, the algorithm performs well.
- 1.Round 1 Completion time: approx 8-10 Hours
- 2.Round 2 Completion time: approx 4-3 Hours
- 3.Round 4 Completion time: approx 2 Hours
- 4.Round 3 Found a powerup which lets it skip the level.
+
+
+ 1. Round 1 Completion time: approx 8-10 Hours
+ 2. Round 2 Completion time: approx 4-3 Hours
+ 3. Round 4 Completion time: approx 2 Hours
+ 4. Round 3 Found a powerup which lets it skip the level.
 
 The times are time required to learn the level and declare a winner which can complete the level by destroying all blocks.
  
