@@ -55,4 +55,36 @@ Then the winner chromosome will play the game until the script is stopped.
 
 ## Observations and Behaviours
 
+The behaviour of the bot mainly depends on the fitness formula it uses. One thing to note is that no information about ball position and block positions and enemy positions are provided to the bot. Only the fitness is provided. The paddle is essentially playing blind, therefore it requires time to master the level.
+
+#### 1.Number of Blocks as a fitness:
+ If the fitness used is number of blocks remaining, then the paddle tries to destroy as many blocks as possible, it prioritizes taking the multiball powerup and building tunnels to make the ball bounce inside it. It depends on the starting moves that the bot performs hence the last 10 random population members in crossover. Later on it even learns to bounce back multiple balls at once (in Round 4). The bot plays at a superhuman level and I found this to be the best fitness function.
+ 
+#### 2.Score as a fitness:
+  If the fitness used is the total score the player has achieved, it performs moderately, one reason is that Powerups give a lot of score than normal blocks, therefore the paddle prioritizes collecting powerups more than keeping the ball alive in initial stages, this gives it a bad start. The fitness may work, but with a bad start the training may take longer.
+  
+#### 3.Time as a fitness:
+   The time that the player was alive can also be used as a fitness and it performs well in the early stages. But in late game, if there are only one or two blocks left, it prioritizes in wasting time bouncing around rather than hitting the blocks and ending the game.
+   
+#### 4.Combinational Fitness:
+  These fitness can be combined as a combination of score, blocks and time, by giving weightage to their overall contribution to the fitness. But for debugging purposed and observations I used the simpler ones.
+
+#### 5. Time spent away from paddle as fitness:
+ One more fitness can be the time spent away from paddle in combination with other fitness, this makes sure that it finds tunnels faster and makes the ball bounce in them more rather than coming back to the paddle again.(Not tested!).
+ 
+#### 6. Growing Chromosome:
+ The growth of chromosome size is the main feature that enabled me to complete the algorithm, it allows us to retain best features in a population and also to explore completely new random options maintaining diversity.
+ 
+#### 7.Late generations:
+ If the training takes too long then the chromosome size increases a lot while the controls that are actually used are still shorter, in this case, crossover becomes irrelevant and the algorithm depends solely on mutation, hence the reason I am focusing on early convergence. The solution will still be found in late generations, but it is a factor of luck and mutation rate.
+Another option can be to put a variable mutation rate as the generations increase, but this may result in the loss of best fit genes. Another solution can be to decrease the **control_gap** after a set of generations( Commented in the code).
+
+
+Overall, the algorithm performs well.
+Round 1 Completion time: approx 8-10 Hours
+Round 2 Completion time: approx 4-3 Hours
+Round 4 Completion time: approx 2 Hours
+Round 3 Found a powerup which lets it skip the level.
+
+The times are time required to learn the level and declare a winner which can complete the level by destroying all blocks.
  
